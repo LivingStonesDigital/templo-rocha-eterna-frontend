@@ -15,7 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
   
   // Usa variáveis de ambiente (opcional)
   const appName = process.env.NEXT_PUBLIC_APP_NAME || "Templo Rocha Eterna";
-  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || "#ffffff";
+  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || "#fff";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "/";
   
   // Nome diferente em dev
@@ -39,7 +39,7 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: "portrait", // "portrait", "landscape", "any"
     
     // Cores
-    background_color: "#ffffff",
+    background_color: "#fff",
     theme_color: themeColor,
     
     // Ícones - todos os tamanhos para máxima compatibilidade

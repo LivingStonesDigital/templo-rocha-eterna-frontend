@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { IconBell } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
+import Notification from "../notification";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -29,9 +30,8 @@ export function SiteHeader() {
           </Button>
         </div>
 
-        <Button className="" variant="ghost" size="icon">
-          <IconBell className="size-5" />
-        </Button>
+        <Notification />
+        
       </div>
     </header>
   );
