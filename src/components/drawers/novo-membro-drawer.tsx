@@ -30,8 +30,10 @@ import {
 import { toast } from "sonner";
 import { Label } from "@/components/ui/label";
 import { useTRPC } from "@/trpc/client";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Spinner } from "../ui/spinner";
+import { Router } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 /* =====================================================
    Schema
@@ -324,6 +326,7 @@ const stepFields: (keyof FormData)[][] = [
 const TOTAL_STEPS = steps.length;
 
 export default function NovoMembroDrawer() {
+  const router = useRouter()
   const trpc = useTRPC();
   const [open, setOpen] = React.useState(false);
   const [step, setStep] = React.useState(0);
@@ -373,11 +376,12 @@ export default function NovoMembroDrawer() {
     setOpen(false);
   };
 
+
   const { mutate, isPending } = useMutation(trpc.membros.create.mutationOptions({
-      onSuccess: () => {
-      
+      onSuccess: async () => {
         setOpen(false);
         toast.success("Membro criado com sucesso!");
+        await router.refresh()
       },
       onError: (err) => {
         toast.error(err.message);

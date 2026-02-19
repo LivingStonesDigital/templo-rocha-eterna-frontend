@@ -15,7 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
   
   // Usa variáveis de ambiente (opcional)
   const appName = process.env.NEXT_PUBLIC_APP_NAME || "Templo Rocha Eterna";
-  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || "#000000";
+  const themeColor = process.env.NEXT_PUBLIC_THEME_COLOR || "#ffffff";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "/";
   
   // Nome diferente em dev

@@ -42,7 +42,7 @@ export function PWAInstallBanner({ delay = 5000 }) {
   return (
     <>
       {/* Banner */}
-      <div className="fixed bottom-4 left-4 right-4 z-50">
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
         <div className="bg-black text-white rounded-2xl p-4 shadow-2xl flex items-center justify-between gap-4 animate-slideUp">
           <div>
             <p className="font-semibold">Instale nosso app</p>

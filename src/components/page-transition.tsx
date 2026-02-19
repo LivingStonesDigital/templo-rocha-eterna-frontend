@@ -7,31 +7,29 @@ import { useRef } from "react";
 const variants = {
   initial: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? 60 : -60,
-    filter: "blur(4px)",
+    x: direction > 0 ? 30 : -30,
   }),
   animate: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
   },
   exit: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? -60 : 60,
-    filter: "blur(4px)",
+    x: direction > 0 ? -30 : 30,
   }),
 };
 
 const transition = {
-  duration: 0.4,
+  duration: 0.2,
   ease: easeInOut,
 };
 
 // Mapa de ordem das rotas para determinar direção
 const ROUTE_ORDER: Record<string, number> = {
   "/": 0,
-  "/about": 1,
-  "/work": 2,
+  "/membros": 1,
+  "/aniversariantes": 2,
+  "/settings": 3,
 };
 
 export default function PageTransition({

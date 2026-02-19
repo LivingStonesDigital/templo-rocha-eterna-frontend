@@ -18,8 +18,8 @@ async function Membros() {
   const membros = await caller.membros.list();
   
   return (
-    <section className="@container/main relative flex flex-1 flex-col gap-2 py-2 px-6">
-      <div className="sticky top-0 z-10 pb-6 gap-y-4 flex flex-col justify-between mt-2 bg-white">
+    <section className="@container/main flex flex-1 flex-col gap-2 py-2 px-6">
+      <div className="pb-6 gap-y-4 flex flex-col justify-between mt-2 bg-white">
         <div className="flex justify-between">
           <div>
             <h1 className="font-bold text-xl">Membros</h1>
@@ -52,7 +52,7 @@ async function Membros() {
         </div>
       </div>
 
-      <div className="z-0 flex flex-col gap-4">
+      <div className="flex z-10 flex-col gap-4">
         {membros.map((membro, index) => (
           <Card
             key={membro.id}
