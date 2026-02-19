@@ -1,3 +1,5 @@
+git commit -m "fix errors" --author="LivingStonesDigital <stonedigitalliving@gmail.com>"
+
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, easeInOut } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 
@@ -24,7 +24,7 @@ const variants = {
 
 const transition = {
   duration: 0.4,
-  ease: [0.25, 0.1, 0.25, 1],
+  ease: easeInOut,
 };
 
 // Mapa de ordem das rotas para determinar direção

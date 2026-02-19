@@ -22,9 +22,6 @@ export default function Home() {
       },
     }),
   );
-  const criarUser = async () => {
-    await mutate();
-  };
 
   return (
     <section className="z-0 @container/main flex flex-1 flex-col gap-2 px-6">
